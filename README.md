@@ -23,7 +23,7 @@ To run this tool, you'll need to have Python 3.x installed. You can install the 
 | LABEL_2 |label of DEBUG_LOG_CSV_PATH_2 in graph, you can leave blank|string|
 | LABEL_3 |label of DEBUG_LOG_CSV_PATH_3 in graph, you can leave blank|string|
 | LABEL_4 |label of DEBUG_LOG_CSV_PATH_4 in graph, you can leave blank|string|
-| OUTPUT_PATH |output path to write a graph|True|string|
+| OUTPUT_PATH |output path to write a graph|string|
 | EGO_GRAPH_GENERATION |check if the coefficients graph of ego line |boolean|
 | NEIGHBOR_GRAPH_GENERATION |check if the coefficients graph of neighbor line |boolean|
 | CPP_GRAPH_GENERATION |check if the coefficients graph of cpp line |boolean|
