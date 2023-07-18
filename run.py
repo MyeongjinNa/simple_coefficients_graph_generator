@@ -23,9 +23,8 @@ class Run():
     def load_raw_data(self, file_path, label):
         """
         Rearrange the values by frameID from raw csv file
-        :return: the data frame of sv ego or next line or cpp/can/dgps
+        :return: the data frame of log
         """
-        # get directory name from playlist csv file
         if os.path.exists(file_path):
             arrg = Preprocessor()
             df = arrg.rearrangement(file_path)

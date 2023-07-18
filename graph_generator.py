@@ -25,8 +25,8 @@ class Visualize:
 
         me_color = 'tomato'
         sv_color = ['blue', 'green', 'fuchsia', 'pink']
-        gt_color = 'fuchsia'
-        guide_color = 'gray'
+
+        guiding_color = 'gray'
         cpp_color = 'fuchsia'
 
         fig = make_subplots(rows=6, cols=2,
@@ -62,62 +62,31 @@ class Visualize:
 
         length = len(Datas[0].index)
 
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.01), line=dict(color=guide_color), showlegend=False),row=2, col=1)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.01), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.01), line=dict(color=guiding_color), showlegend=False),row=2, col=1)
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.01), line=dict(color=guiding_color), showlegend=False),
                       row=2, col=1)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.0002), line=dict(color=guide_color), showlegend=False),row=3, col=1)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.0002), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.0002), line=dict(color=guiding_color), showlegend=False),row=3, col=1)
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.0002), line=dict(color=guiding_color), showlegend=False),
                       row=3, col=1)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,confi_val_high_quality), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,confi_val_high_quality), line=dict(color=guiding_color), showlegend=False),
                       row=6, col=1)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.01), line=dict(color=guide_color), showlegend=False),row=2, col=2)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.01), line=dict(color=guide_color), showlegend=False),row=2, col=2)
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.01), line=dict(color=guiding_color), showlegend=False),row=2, col=2)
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.01), line=dict(color=guiding_color), showlegend=False),row=2, col=2)
 
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.0002), line=dict(color=guide_color), showlegend=False),row=3, col=2)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.0002), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.0002), line=dict(color=guiding_color), showlegend=False),row=3, col=2)
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.0002), line=dict(color=guiding_color), showlegend=False),
                       row=3, col=2)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.000002), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.000002), line=dict(color=guiding_color), showlegend=False),
                       row=4, col=1)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.000002), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.000002), line=dict(color=guiding_color), showlegend=False),
                       row=4, col=2)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.000002), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.000002), line=dict(color=guiding_color), showlegend=False),
                       row=4, col=1)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.000002), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.000002), line=dict(color=guiding_color), showlegend=False),
                       row=4, col=2)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,confi_val_high_quality), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,confi_val_high_quality), line=dict(color=guiding_color), showlegend=False),
                       row=6, col=2)
 
-
-        if 'highway' in self.scenario:
-            fig.update_layout(
-                              yaxis2=dict(range=[-2.5, -1.2]),
-                              yaxis3=dict(range=[-0.015, 0.015]),
-                              yaxis4=dict(range=[-0.015, 0.015]),
-                              yaxis5=dict(range=[-0.00019, 0.00019]),
-                              yaxis6=dict(range=[-0.00019, 0.00019]),
-                              yaxis7=dict(range=[-0.0000025, 0.0000025]),
-                              yaxis8=dict(range=[-0.0000025, 0.0000025]),
-                              font=dict(size=9))
-        elif 'curve' in self.scenario:
-            fig.update_layout(
-                              yaxis2=dict(range=[-2, 0]),
-                              yaxis3=dict(range=[-0.05, 0.05]),
-                              yaxis4=dict(range=[-0.05, 0.05]),
-                              yaxis5=dict(range=[-0.002, 0.002]),
-                              yaxis6=dict(range=[-0.002, 0.002]),
-                              yaxis7=dict(range=[-0.000025, 0.000025]),
-                              yaxis8=dict(range=[-0.000025, 0.000025]),
-                              font=dict(size=9))
-        else:
-            fig.update_layout(
-                              yaxis2=dict(range=[-2.5, -1]),
-                              yaxis3=dict(range=[-0.025, 0.025]),
-                              yaxis4=dict(range=[-0.025, 0.025]),
-                              yaxis5=dict(range=[-0.00055, 0.00055]),
-                              yaxis6=dict(range=[-0.00055, 0.00055]),
-                              yaxis7=dict(range=[-0.000005, 0.000005]),
-                              yaxis8=dict(range=[-0.000005, 0.000005]),
-                              font=dict(size=9))
 
 
         fig['layout']['xaxis7']['title'] = 'Frame'
@@ -149,8 +118,8 @@ class Visualize:
 
         me_color = 'tomato'
         sv_color = ['blue', 'green', 'fuchsia', 'purple']
-        gt_color = 'fuchsia'
-        guide_color = 'gray'
+
+        guiding_color = 'gray'
         cpp_color = 'fuchsia'
 
         fig = make_subplots(rows=6, cols=2,
@@ -197,62 +166,31 @@ class Visualize:
 
         length = len(Datas[0].index)
 
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.01), line=dict(color=guide_color), showlegend=False),row=2, col=1)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.01), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.01), line=dict(color=guiding_color), showlegend=False),row=2, col=1)
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.01), line=dict(color=guiding_color), showlegend=False),
                       row=2, col=1)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.0002), line=dict(color=guide_color), showlegend=False),row=3, col=1)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.0002), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.0002), line=dict(color=guiding_color), showlegend=False),row=3, col=1)
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.0002), line=dict(color=guiding_color), showlegend=False),
                       row=3, col=1)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,confi_val_high_quality), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,confi_val_high_quality), line=dict(color=guiding_color), showlegend=False),
                       row=6, col=1)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.01), line=dict(color=guide_color), showlegend=False),row=2, col=2)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.01), line=dict(color=guide_color), showlegend=False),row=2, col=2)
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.01), line=dict(color=guiding_color), showlegend=False),row=2, col=2)
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.01), line=dict(color=guiding_color), showlegend=False),row=2, col=2)
 
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.0002), line=dict(color=guide_color), showlegend=False),row=3, col=2)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.0002), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.0002), line=dict(color=guiding_color), showlegend=False),row=3, col=2)
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.0002), line=dict(color=guiding_color), showlegend=False),
                       row=3, col=2)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.000002), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.000002), line=dict(color=guiding_color), showlegend=False),
                       row=4, col=1)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.000002), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,0.000002), line=dict(color=guiding_color), showlegend=False),
                       row=4, col=2)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.000002), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.000002), line=dict(color=guiding_color), showlegend=False),
                       row=4, col=1)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.000002), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,-0.000002), line=dict(color=guiding_color), showlegend=False),
                       row=4, col=2)
-        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,confi_val_high_quality), line=dict(color=guide_color), showlegend=False),
+        fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,confi_val_high_quality), line=dict(color=guiding_color), showlegend=False),
                       row=6, col=2)
 
-
-        if 'highway' in self.scenario:
-            fig.update_layout(
-                              yaxis2=dict(range=[-2.5, -1.2]),
-                              yaxis3=dict(range=[-0.015, 0.015]),
-                              yaxis4=dict(range=[-0.015, 0.015]),
-                              yaxis5=dict(range=[-0.00019, 0.00019]),
-                              yaxis6=dict(range=[-0.00019, 0.00019]),
-                              yaxis7=dict(range=[-0.0000025, 0.0000025]),
-                              yaxis8=dict(range=[-0.0000025, 0.0000025]),
-                              font=dict(size=9))
-        elif 'curve' in self.scenario:
-            fig.update_layout(
-                              yaxis2=dict(range=[-2, 0]),
-                              yaxis3=dict(range=[-0.05, 0.05]),
-                              yaxis4=dict(range=[-0.05, 0.05]),
-                              yaxis5=dict(range=[-0.002, 0.002]),
-                              yaxis6=dict(range=[-0.002, 0.002]),
-                              yaxis7=dict(range=[-0.000025, 0.000025]),
-                              yaxis8=dict(range=[-0.000025, 0.000025]),
-                              font=dict(size=9))
-        else:
-            fig.update_layout(
-                              yaxis2=dict(range=[-2.5, -1]),
-                              yaxis3=dict(range=[-0.025, 0.025]),
-                              yaxis4=dict(range=[-0.025, 0.025]),
-                              yaxis5=dict(range=[-0.00055, 0.00055]),
-                              yaxis6=dict(range=[-0.00055, 0.00055]),
-                              yaxis7=dict(range=[-0.000005, 0.000005]),
-                              yaxis8=dict(range=[-0.000005, 0.000005]),
-                              font=dict(size=9))
 
 
         fig['layout']['xaxis7']['title'] = 'Frame'
