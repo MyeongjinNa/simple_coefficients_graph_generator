@@ -4,8 +4,6 @@ from run import Run
 import os
 
 DEBUG_FILE_NAME = r"//10.10.21.126/adaf_data/001_DB/1_Vehicle_Road/2020_Mini_Endurance_Run_1050/adaf/Recorder_2020-11-02_15-46-41"
-DEBUG_CAM_PARAM = r"//10.10.21.126/adaf_data/04_Endurance_Run/2020_Mini_Endurance_Run_1050/cam_param_DN8(1920x1080).txt"
-DEBUG_FRAME_LIMIT = "0"
 DEBUG_CAN_DATA_PATH = r"//10.10.21.126/adaf_data/001_DB/1_Vehicle_Road/2020_Mini_Endurance_Run_1050/adaf/Recorder_2020-11-02_15-46-41/Recorder_2020-11-02_15-46-41_can.csv"
 DEBUG_MOBILEYE_PATH = r"//10.10.21.126/adaf_data/001_DB/1_Vehicle_Road/2020_Mini_Endurance_Run_1050/adaf/Recorder_2020-11-02_15-46-41/Recorder_2020-11-02_15-46-41_me.csv"
 
