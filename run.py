@@ -7,11 +7,9 @@ from preprocessor import Preprocessor
 from graph_generator import Visualize
 
 class Run():
-    def __init__(self, file_name, start_frame, can_path, mobileye_path, log_csv_list, label_list, output_path,
+    def __init__(self, file_name, mobileye_path, log_csv_list, label_list, output_path,
                  EGO_GRAPH_GENERATION, CPP_GRAPH_GENERATION, NEIGHBOR_GRAPH_GENERATION, cpp_csv_path):
         self.file_name = os.path.basename(file_name)
-        self.start_frame = start_frame
-        self.can_path = can_path
         self.mobileye_path = mobileye_path
         self.log_csv_list = log_csv_list
         self.label_list = label_list
