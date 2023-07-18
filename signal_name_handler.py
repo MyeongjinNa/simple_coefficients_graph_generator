@@ -31,32 +31,3 @@ class SignalName(Enum):
     Quality = 6.1
 
 
-class ConfusionMatrix(Enum):
-    """
-    Confusion matrix
-
-    TP : true positive
-    FN : false negative
-    FP : false positive
-    TN : true negative
-    """
-    TP = 0
-    FN = 1
-    FP = 2
-    TN = 3
-
-
-if __name__ == '__main__':
-    side = LaneSide
-    coeffi = SignalName
-    for i in LaneSide:
-        print(i.name)
-        for i in coeffi:
-            print(i.name, int(i.value))
-
-    # CM = ConfusionMatrix
-    # for i in CM:
-    #     print(i.name)
-    CM = ConfusionMatrix
-    temp = [1, 2, 3, 4]
-    print(temp[ConfusionMatrix.TP.value])

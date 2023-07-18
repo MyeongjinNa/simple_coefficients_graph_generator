@@ -1,17 +1,9 @@
-import os
-from logger import logger
 
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 from signal_name_handler import *
 
-import pandas as pd
 import numpy as np
-
-
-
-def polynomial(x, c0, c1, c2, c3):
-    return c0 + c1 * x + c2 * x ** 2 + c3 * x ** 3
 
 
 class Visualize:
@@ -87,8 +79,6 @@ class Visualize:
         fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,confi_val_high_quality), line=dict(color=guiding_color), showlegend=False),
                       row=6, col=2)
 
-
-
         fig['layout']['xaxis7']['title'] = 'Frame'
         fig['layout']['xaxis8']['title'] = 'Frame'
         fig['layout']['xaxis11']['title'] = 'Frame'
@@ -107,8 +97,6 @@ class Visualize:
         fig['layout']['yaxis11']['title'] = 'Confidence(Quality)'
         fig['layout']['yaxis12']['title'] = 'Confidence(Quality)'
         fig['layout']['title'] = self.recording_name + ' ' + str(self.scenario)
-
-
 
         return fig
 
@@ -154,7 +142,6 @@ class Visualize:
                                                    name='ME'+'_' + side.name + '_' +signal.name),
                                   row=int(signal.value), col=side.value)
 
-
         for side in LaneSide:
             for signal in SignalName:
                 if 'CPP.Host.{}'.format(signal.name) in cpp_data.columns:
@@ -191,8 +178,6 @@ class Visualize:
         fig.add_trace(trace=go.Scatter(x=Datas[0].index, y=np.full(length,confi_val_high_quality), line=dict(color=guiding_color), showlegend=False),
                       row=6, col=2)
 
-
-
         fig['layout']['xaxis7']['title'] = 'Frame'
         fig['layout']['xaxis8']['title'] = 'Frame'
         fig['layout']['xaxis11']['title'] = 'Frame'
@@ -212,10 +197,5 @@ class Visualize:
         fig['layout']['yaxis12']['title'] = 'Confidence(Quality)'
         fig['layout']['title'] = self.recording_name + ' ' + str(self.scenario)
 
-
         return fig
-
-
-
-
 

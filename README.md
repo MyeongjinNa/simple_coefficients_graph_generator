@@ -13,12 +13,12 @@ To run this tool, you'll need to have Python 3.x installed. You can install the 
 
 |**Argument**|**Description**|**Type**|
 | ------- | ------- | ------- |
-| DEBUG_FILE_NAME |path to measurement directory | string | 
-| DEBUG_MOBILEYE_PATH |path to Mobileye CSV file, you can leave blank|string|
-| DEBUG_LOG_CSV_PATH_1 |path to Log CSV file(lda_tiny_log.csv)|string|
-| DEBUG_LOG_CSV_PATH_2 |path to Log CSV file(lda_tiny_log.csv), you can leave blank|string|
-| DEBUG_LOG_CSV_PATH_3 |path to Log CSV file(lda_tiny_log.csv), you can leave blank|string|
-| DEBUG_LOG_CSV_PATH_4 |path to Log CSV file(lda_tiny_log.csv), you can leave blank|string|
+| FILE_NAME |path to measurement directory | string | 
+| MOBILEYE_CSV_PATH |path to Mobileye CSV file, you can leave blank|string|
+| LOG_CSV_PATH_1 |path to Log CSV file(lda_tiny_log.csv)|string|
+| LOG_CSV_PATH_2 |path to Log CSV file(lda_tiny_log.csv), you can leave blank|string|
+| LOG_CSV_PATH_3 |path to Log CSV file(lda_tiny_log.csv), you can leave blank|string|
+| LOG_CSV_PATH_4 |path to Log CSV file(lda_tiny_log.csv), you can leave blank|string|
 | LABEL_1 |label of DEBUG_LOG_CSV_PATH_1 in graph|string|
 | LABEL_2 |label of DEBUG_LOG_CSV_PATH_2 in graph, you can leave blank|string|
 | LABEL_3 |label of DEBUG_LOG_CSV_PATH_3 in graph, you can leave blank|string|
