@@ -2,7 +2,7 @@
 
 This tool is for generating the coefficients graph of the polynomials compared with Mobileye.
 
-## Getting Started
+### Getting Started
 
 To run this tool, you'll need to have Python 3.x installed. You can install the required Python packages using pip and the requirements.txt file.
 
@@ -27,4 +27,4 @@ To run this tool, you'll need to have Python 3.x installed. You can install the 
 | EGO_GRAPH_GENERATION |check if the coefficients graph of ego line |boolean|
 | NEIGHBOR_GRAPH_GENERATION |check if the coefficients graph of neighbor line |boolean|
 | CPP_GRAPH_GENERATION |check if the coefficients graph of cpp line |boolean|
-| CPP_CSV_PATH |path to Log CSV file(adaf_log.csv), you can leave blank|boolean|
+| CPP_CSV_PATH |path to Log CSV file(adaf_log.csv), you can leave blank|string|
