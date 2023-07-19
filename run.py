@@ -1,10 +1,9 @@
 import os
 import pandas as pd
-import numpy as np
-import glob
 from logger import logger
 from preprocessor import Preprocessor
 from graph_generator import Visualize
+
 
 class Run():
     def __init__(self, file_name, mobileye_path, log_csv_list, label_list, output_path,

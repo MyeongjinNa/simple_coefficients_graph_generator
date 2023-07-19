@@ -10,7 +10,6 @@ class Visualize:
     def __init__(self, file_name, label_list):
         self.recording_name = file_name
         self.label_list = label_list
-        self.scenario = 'highway'
 
     def plots_coefficient_graph_next_line(self, me_data, *Datas):
         confi_val_high_quality = 0.77
@@ -96,7 +95,7 @@ class Visualize:
         # fig['layout']['yaxis11']['title'] = 'Ego speed[kph]'
         fig['layout']['yaxis11']['title'] = 'Confidence(Quality)'
         fig['layout']['yaxis12']['title'] = 'Confidence(Quality)'
-        fig['layout']['title'] = self.recording_name + ' ' + str(self.scenario)
+        fig['layout']['title'] = self.recording_name
 
         return fig
 
@@ -195,7 +194,7 @@ class Visualize:
         # fig['layout']['yaxis11']['title'] = 'Ego speed[kph]'
         fig['layout']['yaxis11']['title'] = 'Confidence(Quality)'
         fig['layout']['yaxis12']['title'] = 'Confidence(Quality)'
-        fig['layout']['title'] = self.recording_name + ' ' + str(self.scenario)
+        fig['layout']['title'] = self.recording_name
 
         return fig
 

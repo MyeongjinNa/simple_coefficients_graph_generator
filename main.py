@@ -1,7 +1,8 @@
-from logger import logger
-import getpass
-from run import Run
 import os
+import getpass
+from logger import logger
+from run import Run
+
 
 FILE_NAME = r"//10.10.21.126/adaf_data/001_DB/1_Vehicle_Road/2020_Mini_Endurance_Run_1050/adaf/Recorder_2020-11-02_15-46-41"
 MOBILEYE_CSV_PATH = r"//10.10.21.126/adaf_data/001_DB/1_Vehicle_Road/2020_Mini_Endurance_Run_1050/adaf/Recorder_2020-11-02_15-46-41/Recorder_2020-11-02_15-46-41_me.csv"
